@@ -58,14 +58,15 @@ Aggiungere attraverso un form un membro al team
                 <div class="card-opaca">
                      <img class = "imgInfo foto-utente" src="./img/user-img.png" alt="">
                         <div class="contenitoreInfo" class="text-center">
-                        <div class="nome text-center"><input type="text" name="" placeholder = "Inserisci il tuo nome"id=""></div>
-                        <div class="lavoro text-center"><input type="text" name=""placeholder = "Inserisci il tuo ruolo"id=""></div>
-                        <div class="contenitore-icona">
-                            <i class="fa-solid fa-plus"></i>
-                            <span>Effettua la tua candidatura</span>
+                            <div class="nome text-center"><input type="text" name="" placeholder = "Inserisci il tuo nome"id=""></div>
+                            <div class="lavoro text-center"><input type="text" name=""placeholder = "Inserisci il tuo ruolo"id=""></div>
+                            <div class="contenitore-icona">
+                                <i class="fa-solid fa-plus"></i>
+                                <span>Effettua la tua candidatura</span>
+                            </div>
                         </div>
-                    
                 </div>
+            </div>
 
 */
 
@@ -79,7 +80,7 @@ const myContainer = document.getElementById('my-container');
 function stampaLista(nomeLista){
     for (let value of nomeLista){
         for (let key in value){
-            console.log(key + ' : ' + value[key]);
+            //console.log(key + ' : ' + value[key]);
         }
     }
 }
@@ -127,13 +128,68 @@ function creaElementi(){
 
    } 
    console.log(myContainer);
-   
-}
+
+   candidati()
+
+
 //funzione per creare candidatura utente
 
 function candidati(){
+    const divUtente = document.createElement('div');
+    divUtente.className = 'col-3 cover-candidatura';
 
+    const divEffettoCard = document.createElement('div');
+   divEffettoCard.className = 'card-opaca';
+
+   const imgUtente = document.createElement('img');
+   imgUtente.className = 'imgInfo foto-utente';
+
+   imgUtente.src = `./img/user-img.png`;
+
+   const divContenitoreInfo = document.createElement('div');
+   divContenitoreInfo.className = ' contenitoreInfo text-center';
+
+   const divNomeUtente = document.createElement('div');
+   divNomeUtente.className = 'nome text-center';
+
+   const divLavoroUtente = document.createElement('div');
+   divLavoroUtente.className = 'lavoro text-center';
+
+   const inputNome = document.createElement('input');
+    inputNome.setAttribute("type", "text");
+   
+
+    const inputLavoro = document.createElement('input');
+    inputLavoro.setAttribute("type", "text");
+
+    const divContenitoreicona = document.createElement('div');
+   divContenitoreicona.className = 'contenitore-icona';
+   divContenitoreicona.innerHTML = ' <i class="fa-solid fa-plus"></i>';
+   divContenitoreicona.innerHTML = 'Effettua la tua candidatura';
+
+    
+   divRow.append(divUtente);
+   divUtente.append(divEffettoCard);
+   divEffettoCard.append(imgUtente);
+   divEffettoCard.append(divContenitoreInfo);
+   divContenitoreInfo.append(divNomeUtente);
+   divNomeUtente.append(inputNome);
+   divContenitoreInfo.append(divLavoroUtente);
+   divLavoroUtente.append(inputLavoro);
+   divContenitoreInfo.append(divContenitoreicona);
+
+
+   
 }
+
+
+
+
+   
+}
+
+
+
 
 // creo array con info del team
 
