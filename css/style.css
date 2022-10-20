@@ -54,3 +54,46 @@ footer{
     opacity: 0.50;
     transition: opacity 1s linear;
 }
+
+/* MODIFICO CARD CANDIDATURA */
+
+.cover-candidatura{
+    border: 1px solid var(--lightblack);
+    border-radius: 5px;
+   
+}
+
+.nome, .lavoro{
+    width: 100%;
+}
+
+.fa-solid{
+  font-size: 30px;
+}
+
+.card-opaca{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.contenitore-icona{
+    border: 1px solid var(--lightblack);
+    border-radius: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 60px;
+    left: 0;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+   opacity: 0;
+}
+
+.contenitore-icona:hover{
+    opacity: 1;
+    transition: opacity 1s linear;
+}
+        

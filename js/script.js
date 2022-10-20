@@ -52,6 +52,21 @@ Aggiungere attraverso un form un membro al team
 
 
 
+ // CARD CANDIDATURA 
+ 
+            <div class="col-3 cover-candidatura"> 
+                <div class="card-opaca">
+                     <img class = "imgInfo foto-utente" src="./img/user-img.png" alt="">
+                        <div class="contenitoreInfo" class="text-center">
+                        <div class="nome text-center"><input type="text" name="" placeholder = "Inserisci il tuo nome"id=""></div>
+                        <div class="lavoro text-center"><input type="text" name=""placeholder = "Inserisci il tuo ruolo"id=""></div>
+                        <div class="contenitore-icona">
+                            <i class="fa-solid fa-plus"></i>
+                            <span>Effettua la tua candidatura</span>
+                        </div>
+                    
+                </div>
+
 */
 
 //PRENDO ELEMENTI DA HTML
@@ -80,13 +95,17 @@ function creaElementi(){
     //ciclo for of per creare div in base ai valori dell'array oggetto
    for (let value of teamInfo){
          const divCol4 = document.createElement('div');
-         divCol4.className = 'col-4 cover-opaca';
+         divCol4.className = 'col-3 cover-opaca';
+
         const img = document.createElement('img');
         img.className = 'imgInfo';
+
         const divContenitoreInfo = document.createElement('div');
         divContenitoreInfo.className = 'contenitoreInfo text-center';
+
         const divNome = document.createElement('div');
         divNome.className = 'Nome text-center';
+
         const divLavoro = document.createElement('div');
         divLavoro.className = 'lavoro text-center';
 
@@ -108,9 +127,12 @@ function creaElementi(){
 
    } 
    console.log(myContainer);
-
-
    
+}
+//funzione per creare candidatura utente
+
+function candidati(){
+
 }
 
 // creo array con info del team
