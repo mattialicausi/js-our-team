@@ -4,7 +4,7 @@
 MILESTONE 0:
  x Creare l’array di oggetti con le informazioni fornite.
 MILESTONE 1:
-Stampare su console le informazioni di nome, ruolo e la stringa della foto
+ x Stampare su console le informazioni di nome, ruolo e la stringa della foto
 MILESTONE 2:
 Stampare le stesse informazioni su DOM sottoforma di stringhe
 BONUS 1:
@@ -15,6 +15,16 @@ BONUS 3:
 Aggiungere attraverso un form un membro al team
 */
 
+// FUNZIONI
+
+// creo ciclo for of con all'interno for in per stampare teamInfo in console
+function stampaLista(nomeLista){
+    for (let value of nomeLista){
+        for (let key in value){
+            console.log(key + ' : ' + value[key]);
+        }
+    }
+}
 
 // creo array con info del team
 
@@ -50,3 +60,8 @@ const teamInfo = [
         'image': 'barbara-ramos-graphic-designer.jpg',
     }
 ]
+
+
+// RICHIAMO FUNZIONI
+
+stampaLista(teamInfo);
