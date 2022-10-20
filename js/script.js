@@ -26,17 +26,41 @@ Aggiungere attraverso un form un membro al team
      </div>
  </div>
 
+ CREARE 1 DIV
+ aggiungere classe row
+ CREARE 1 DIV 
+ aggiungere classe col-4 cover-opaca
+ CREARE 6 DIV
 
 
+ ciclo for 6 i < stampaLista.value
+ aggiungere id="contenitoreInfo" class="text-center"
 
+
+ CREARE 1 DIV
+ aggiungere id="nome"
+ CREARE 1 DIV
+ aggiungere id="lavoro"
+
+ APPENDERE
+ const divRow = myContainer.append(divRow);
+ divRow.append(divCol4)
+ divCol4.appendChild(contenitoreInfo)
+ contenitoreInfo.append(img)
+ contenitoreInfo.append(divNome)
+ contenitoreInfo.append(divLavoro)
 
 
 
 */
 
+//PRENDO ELEMENTI DA HTML
+
+const myContainer = document.getElementById('my-container');
+
 // FUNZIONI
 
-// creo ciclo for of con all'interno for in per stampare teamInfo in console
+//funzione con ciclo for of con all'interno for in per stampare teamInfo in console
 function stampaLista(nomeLista){
     for (let value of nomeLista){
         for (let key in value){
@@ -44,6 +68,45 @@ function stampaLista(nomeLista){
         }
     }
 }
+
+//funzione per creare elementi in html
+
+function creaElementi(){
+    const divRow = document.createElement('div');
+    divRow.className = 'row';
+    console.log(divRow);
+
+    const divCol4 = document.createElement('div');
+    divCol4.className = 'col-4 cover-opaca';
+    //console.log(divCol4);
+
+    myContainer.append(divRow);
+    divRow.append(divCol4);
+
+
+//ciclo for of per creare div in base ai valori dell'array oggetto
+   for (let value of teamInfo){
+        const divImg = document.createElement('div');
+        const divContenitoreInfo = document.createElement('div');
+        divContenitoreInfo.className = 'contenitoreInfo text-center';
+        const divNome = document.createElement('div');
+        divNome.className = 'Nome';
+        const divLavoro = document.createElement('div');
+        divLavoro.className = 'lavoro';
+
+        divCol4.append(divImg);
+        divCol4.append(divContenitoreInfo);
+        divCol4.append(divNome);
+        divCol4.append(divLavoro);
+   } 
+
+}
+
+
+
+
+
+
 
 // creo array con info del team
 
@@ -84,3 +147,5 @@ const teamInfo = [
 // RICHIAMO FUNZIONI
 
 stampaLista(teamInfo);
+
+creaElementi();

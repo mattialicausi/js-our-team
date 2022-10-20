@@ -20,8 +20,6 @@ header{
     height:calc(100vh - 130px);
     width: 100%;
     background-color: var(--lightgray);
-  
-
 }
 
 footer{
@@ -29,7 +27,6 @@ footer{
     background-color: var(--lightblack);
     color: var(--lightgray);
 }
-
 
 #my-container{
     margin: 0 auto;
@@ -45,11 +42,11 @@ footer{
     margin: 0 auto;
 }
 
+/* MODIFICHE MAIN */
 .col-4 img{
     width:100%;
     height: auto;
     padding: 5px;
- 
     border-radius: 10px;
 }
 
