@@ -76,18 +76,13 @@ function creaElementi(){
     divRow.className = 'row';
     //console.log(divRow);
 
-    const divCol4 = document.createElement('div');
-    divCol4.className = 'col-4 cover-opaca';
-    //console.log(divCol4);
-
-    myContainer.append(divRow);
-    divRow.append(divCol4);
-
 
     //ciclo for of per creare div in base ai valori dell'array oggetto
    for (let value of teamInfo){
+         const divCol4 = document.createElement('div');
+         divCol4.className = 'col-4 cover-opaca';
         const img = document.createElement('img');
-        img.className = 'img';
+        img.className = 'imgInfo';
         const divContenitoreInfo = document.createElement('div');
         divContenitoreInfo.className = 'contenitoreInfo text-center';
         const divNome = document.createElement('div');
@@ -95,42 +90,28 @@ function creaElementi(){
         const divLavoro = document.createElement('div');
         divLavoro.className = 'lavoro';
 
+        myContainer.append(divRow);
+        divRow.append(divCol4);
         divCol4.append(img);
         divCol4.append(divContenitoreInfo);
         divCol4.append(divNome);
         divCol4.append(divLavoro);
 
-        for(let i = 0; i < teamInfo.length; i++){
-            for(let a = 0; a < teamInfo[i].image.length; a++){
-                img.innerHTML = teamInfo[i].image[a];
-            }    
-            for(let a = 0; a < teamInfo[i].nome.length; a++){
-                divNome.innerHTML = teamInfo[i].nome[a];
-            } 
-            for(let a = 0; a < teamInfo[i].role.length; a++){
-                divLavoro.innerHTML = teamInfo[i].role[a];
-            } 
-
-           
-        }
-        console.log(img);
-            console.log(divNome);
-            console.log(divLavoro);
+        img.src = `./img/${value.image}`;
+        //console.log(value.image);
         
+        divNome.innerHTML += value.nome;
+        //console.log(value.nome);
+        
+        divLavoro.innerHTML += value.role;
+        //console.log(value.role);
+
    } 
    console.log(myContainer);
 
 
    
 }
-
-// //funzione per pushare key dei valori dell'array oggetto in div creati con funzione creaElementi()
-//     function inserisciValori(){
-//      for (let value of teamInfo){
-       
-      
-//    } 
-// }
 
 // creo array con info del team
 
@@ -174,4 +155,3 @@ stampaLista(teamInfo);
 
 creaElementi();
 
-// inserisciValori();
