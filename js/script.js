@@ -86,9 +86,9 @@ function creaElementi(){
         const divContenitoreInfo = document.createElement('div');
         divContenitoreInfo.className = 'contenitoreInfo text-center';
         const divNome = document.createElement('div');
-        divNome.className = 'Nome';
+        divNome.className = 'Nome text-center';
         const divLavoro = document.createElement('div');
-        divLavoro.className = 'lavoro';
+        divLavoro.className = 'lavoro text-center';
 
         myContainer.append(divRow);
         divRow.append(divCol4);
