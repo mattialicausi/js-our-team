@@ -13,6 +13,25 @@ BONUS 2:
 Organizzare i singoli membri in card/schede e stilarli a vostro gusto
 BONUS 3:
 Aggiungere attraverso un form un membro al team
+
+
+                            HTML DA CREARE
+
+<div class="row">
+     <div class="col-4 cover-opaca"> 
+         <img src="./img/angela-caroll-chief-editor.jpg" alt="">
+             <div id="contenitoreInfo" class="text-center">
+                 <div id="nome">Mattia</div>
+             <div id="lavoro">Developer</div>
+     </div>
+ </div>
+
+
+
+
+
+
+
 */
 
 // FUNZIONI

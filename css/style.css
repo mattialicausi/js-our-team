@@ -20,6 +20,7 @@ header{
     height:calc(100vh - 130px);
     width: 100%;
     background-color: var(--lightgray);
+  
 
 }
 
@@ -32,12 +33,28 @@ footer{
 
 #my-container{
     margin: 0 auto;
-    width: 1200px;
-    height: 100%;
+    width: 1000px;
+   
     border: 1px solid yellow;
+    display: flex;
+    align-items: center;
 }
 
 .largezza-max{
     width: 1200px;
     margin: 0 auto;
+}
+
+.col-4 img{
+    width:100%;
+    height: auto;
+    padding: 5px;
+ 
+    border-radius: 10px;
+}
+
+.cover-opaca:hover{
+    cursor: pointer;
+    opacity: 0.50;
+    transition: opacity 1s linear;
 }
