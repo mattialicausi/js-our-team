@@ -3,3 +3,26 @@
 body{
     font-family: 'PT Sans', sans-serif;
 }
+
+/* MODIFICHE DIMENSIONI GENERALI */
+header{
+    height: 80px;
+    border: 1px solid red;
+}
+
+#container-generale{
+    height:calc(100vh - 130px);
+    width: 100%;
+}
+
+footer{
+    height: 50px;
+    border: 1px solid yellow;
+}
+
+#my-container{
+    margin: 0 auto;
+    width: 1200px;
+    height: 100%;
+    border: 1px solid black;
+}
